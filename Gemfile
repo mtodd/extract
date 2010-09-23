@@ -28,3 +28,7 @@ gem 'ruby-debug'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'mysql', '2.8.1'
+gem 'will_paginate', '~> 3.0.pre2'
