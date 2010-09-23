@@ -1,0 +1,10 @@
+== Extract
+
+EXercise TRAcking and Cool Tools
+
+=== Deployment
+
+* git clone 
+* customize .rvmrc as needed
+* bundle install
+* rails server
