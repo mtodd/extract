@@ -32,3 +32,6 @@ gem 'ruby-debug'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'mysql', '2.8.1'
 gem 'will_paginate', '~> 3.0.pre2'
+
+gem 'rcov'
+gem 'rails_code_qa'

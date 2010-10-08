@@ -1,5 +1,7 @@
 .bundle
+coverage
 db/*.sqlite3
 log/*.log
 tmp/**/*
+public/system
 .DS_Store
