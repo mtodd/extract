@@ -1,0 +1,105 @@
+<%= form_for(@activity) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :activity %><br />
+    <%= f.text_field :activity %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :temperature %><br />
+    <%= f.text_field :temperature %>
+  </div>
+  <div class="field">
+    <%= f.label :equipment %><br />
+    <%= f.text_field :equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br />
+    <%= f.time_select :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :max_speed %><br />
+    <%= f.text_field :max_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :average_heart_rate %><br />
+    <%= f.text_field :average_heart_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :max_heart_rate %><br />
+    <%= f.text_field :max_heart_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :calories %><br />
+    <%= f.text_field :calories %>
+  </div>
+  <div class="field">
+    <%= f.label :max_elevation %><br />
+    <%= f.text_field :max_elevation %>
+  </div>
+  <div class="field">
+    <%= f.label :total_elevation_gain %><br />
+    <%= f.text_field :total_elevation_gain %>
+  </div>
+  <div class="field">
+    <%= f.label :total_elevation_loss %><br />
+    <%= f.text_field :total_elevation_loss %>
+  </div>
+  <div class="field">
+    <%= f.label :with %><br />
+    <%= f.text_area :with %>
+  </div>
+  <div class="field">
+    <%= f.label :average_cadence %><br />
+    <%= f.text_field :average_cadence %>
+  </div>
+  <div class="field">
+    <%= f.label :route %><br />
+    <%= f.text_area :route %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_area :link %>
+  </div>
+  <div class="field">
+    <%= f.label :weather %><br />
+    <%= f.text_area :weather %>
+  </div>
+  <div class="field">
+    <%= f.label :how_i_felt %><br />
+    <%= f.text_field :how_i_felt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,65 @@
+<h1>Listing activities</h1>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Activity</th>
+    <th>Location</th>
+    <th>Temperature</th>
+    <th>Equipment</th>
+    <th>Duration</th>
+    <th>Distance</th>
+    <th>Max speed</th>
+    <th>Average heart rate</th>
+    <th>Max heart rate</th>
+    <th>Calories</th>
+    <th>Max elevation</th>
+    <th>Total elevation gain</th>
+    <th>Total elevation loss</th>
+    <th>With</th>
+    <th>Average cadence</th>
+    <th>Route</th>
+    <th>Notes</th>
+    <th>Link</th>
+    <th>Weather</th>
+    <th>How i felt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= activity.day %></td>
+    <td><%= activity.time %></td>
+    <td><%= activity.activity %></td>
+    <td><%= activity.location %></td>
+    <td><%= activity.temperature %></td>
+    <td><%= activity.equipment %></td>
+    <td><%= activity.duration %></td>
+    <td><%= activity.distance %></td>
+    <td><%= activity.max_speed %></td>
+    <td><%= activity.average_heart_rate %></td>
+    <td><%= activity.max_heart_rate %></td>
+    <td><%= activity.calories %></td>
+    <td><%= activity.max_elevation %></td>
+    <td><%= activity.total_elevation_gain %></td>
+    <td><%= activity.total_elevation_loss %></td>
+    <td><%= activity.with %></td>
+    <td><%= activity.average_cadence %></td>
+    <td><%= activity.route %></td>
+    <td><%= activity.notes %></td>
+    <td><%= activity.link %></td>
+    <td><%= activity.weather %></td>
+    <td><%= activity.how_i_felt %></td>
+    <td><%= link_to 'Show', activity %></td>
+    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+    <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Activity', new_activity_path %>

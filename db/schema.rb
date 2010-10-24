@@ -10,7 +10,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101024221114) do
+ActiveRecord::Schema.define(:version => 20101024225235) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "user_id"
+    t.date     "day"
+    t.time     "time"
+    t.string   "activity"
+    t.string   "location"
+    t.decimal  "temperature"
+    t.string   "equipment"
+    t.time     "duration"
+    t.decimal  "distance"
+    t.decimal  "max_speed"
+    t.decimal  "average_heart_rate"
+    t.decimal  "max_heart_rate"
+    t.integer  "calories"
+    t.integer  "max_elevation"
+    t.integer  "total_elevation_gain"
+    t.integer  "total_elevation_loss"
+    t.text     "with"
+    t.integer  "average_cadence"
+    t.text     "route"
+    t.text     "notes"
+    t.text     "link"
+    t.text     "weather"
+    t.integer  "how_i_felt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

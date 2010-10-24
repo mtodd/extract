@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Day:</b>
+  <%= @activity.day %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @activity.time %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @activity.location %>
+</p>
+
+<p>
+  <b>Temperature:</b>
+  <%= @activity.temperature %>
+</p>
+
+<p>
+  <b>Equipment:</b>
+  <%= @activity.equipment %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @activity.duration %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= @activity.distance %>
+</p>
+
+<p>
+  <b>Max speed:</b>
+  <%= @activity.max_speed %>
+</p>
+
+<p>
+  <b>Average heart rate:</b>
+  <%= @activity.average_heart_rate %>
+</p>
+
+<p>
+  <b>Max heart rate:</b>
+  <%= @activity.max_heart_rate %>
+</p>
+
+<p>
+  <b>Calories:</b>
+  <%= @activity.calories %>
+</p>
+
+<p>
+  <b>Max elevation:</b>
+  <%= @activity.max_elevation %>
+</p>
+
+<p>
+  <b>Total elevation gain:</b>
+  <%= @activity.total_elevation_gain %>
+</p>
+
+<p>
+  <b>Total elevation loss:</b>
+  <%= @activity.total_elevation_loss %>
+</p>
+
+<p>
+  <b>With:</b>
+  <%= @activity.with %>
+</p>
+
+<p>
+  <b>Average cadence:</b>
+  <%= @activity.average_cadence %>
+</p>
+
+<p>
+  <b>Route:</b>
+  <%= @activity.route %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @activity.notes %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @activity.link %>
+</p>
+
+<p>
+  <b>Weather:</b>
+  <%= @activity.weather %>
+</p>
+
+<p>
+  <b>How i felt:</b>
+  <%= @activity.how_i_felt %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

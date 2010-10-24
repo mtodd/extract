@@ -1,0 +1,11 @@
+<h2>Import CSV</h2>
+
+<%= form_tag import_path, :multipart => true do %>
+    <label for="csv">CSV File:</label>
+    <%= file_field_tag :csv %><br>
+    <%= submit_tag "Upload", :disable_with => 'Uploading...' %>
+<% end %>
+
+
+<h2>Import KML</h2>
+<em>Coming Soon!</em>
