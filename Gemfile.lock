@@ -45,6 +45,8 @@ GEM
       ruby_parser (~> 2.0)
       sexp_processor (~> 3.0)
     i18n (0.4.1)
+    jquery-rails (0.2.4)
+      rails (~> 3.0)
     linecache (0.43)
     mail (2.2.7)
       activesupport (>= 2.3.6)
@@ -99,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
+  jquery-rails
   mysql (= 2.8.1)
   rails (= 3.0.1)
   rails_code_qa

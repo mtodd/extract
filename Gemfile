@@ -4,6 +4,7 @@ gem 'rails', '3.0.1'
 gem 'devise'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'jquery-rails'
 
 gem 'mysql', '2.8.1'
 gem 'will_paginate', '~> 3.0.pre2'
