@@ -10,7 +10,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mysql', '2.8.1'
 
 group :development, :test do
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'mocha'
   gem 'ruby-debug'
   gem 'rcov'

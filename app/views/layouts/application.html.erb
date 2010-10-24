@@ -1,14 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="1">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>extract</title>
-    <%= stylesheet_link_tag :all, :media => 'all' %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
-  </head>
-  <body>
-    
-    <%= yield %>
-    
-  </body>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Extract</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%= render :partial => 'layouts/account_links' %>
+<hr />
+<% if notice || alert %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<% end %>
+<h1>Extract</h1>
+
+<%= yield %>
+
+</body>
 </html>
