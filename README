@@ -10,3 +10,7 @@ It's that great!
 * customize .rvmrc as needed
 * bundle install
 * rails server
+
+=== Live!
+
+http://extract.heroku.com/

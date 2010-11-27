@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'heroku'
+
 gem 'rails', '3.0.1'
 gem 'jquery-rails'
 
