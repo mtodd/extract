@@ -27,12 +27,17 @@
 
 <p>
   <b>Duration:</b>
-  <%= @activity.duration %>
+  <%= format_duration(@activity.duration) %>
 </p>
 
 <p>
   <b>Distance:</b>
   <%= @activity.distance %>
+</p>
+
+<p>
+  <b>Average speed:</b>
+  <%= @activity.max_speed %>
 </p>
 
 <p>
@@ -68,6 +73,11 @@
 <p>
   <b>Total elevation loss:</b>
   <%= @activity.total_elevation_loss %>
+</p>
+
+<p>
+  <b>Slope:</b>
+  <%= @activity.slope %>
 </p>
 
 <p>

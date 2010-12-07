@@ -12,6 +12,7 @@
     <th>Equipment <%= order_by_links("activities_path","equipment") %></th>
     <th>Duration <%= order_by_links("activities_path","duration") %></th>
     <th>Distance <%= order_by_links("activities_path","distance") %></th>
+    <th>Average speed <%= order_by_links("activities_path","average_speed") %></th>
     <th>Max speed <%= order_by_links("activities_path","max_speed") %></th>
     <th>Average heart rate <%= order_by_links("activities_path","average_heart_rate") %></th>
     <th>Max heart rate <%= order_by_links("activities_path","max_heart_rate") %></th>
@@ -19,6 +20,7 @@
     <th>Max elevation <%= order_by_links("activities_path","max_elevation") %></th>
     <th>Total elevation gain <%= order_by_links("activities_path","total_elevation_gain") %></th>
     <th>Total elevation loss <%= order_by_links("activities_path","total_elevation_loss") %></th>
+    <th>Slope <%= order_by_links("activities_path", "slope") %></th>
     <th>With <%= order_by_links("activities_path","with") %></th>
     <th>Average cadence <%= order_by_links("activities_path","average_cadence") %></th>
     <th>Route <%= order_by_links("activities_path","activity.route") %></th>
@@ -37,8 +39,9 @@
     <td><%= activity.location %></td>
     <td><%= activity.temperature %></td>
     <td><%= activity.equipment %></td>
-    <td><%= activity.duration %></td>
+    <td><%= format_duration(activity.duration) %></td>
     <td><%= activity.distance %></td>
+    <td><%= activity.average_speed %></td>
     <td><%= activity.max_speed %></td>
     <td><%= activity.average_heart_rate %></td>
     <td><%= activity.max_heart_rate %></td>
@@ -46,6 +49,7 @@
     <td><%= activity.max_elevation %></td>
     <td><%= activity.total_elevation_gain %></td>
     <td><%= activity.total_elevation_loss %></td>
+    <td><%= activity.slope %></td>
     <td><%= activity.with %></td>
     <td><%= activity.average_cadence %></td>
     <td><%= link_to 'click', activity.route %></td>

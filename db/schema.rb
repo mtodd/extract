@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101024225235) do
+ActiveRecord::Schema.define(:version => 20101207193408) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20101024225235) do
     t.string   "location"
     t.decimal  "temperature"
     t.string   "equipment"
-    t.time     "duration"
+    t.integer  "duration"
     t.decimal  "distance"
     t.decimal  "max_speed"
     t.decimal  "average_heart_rate"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(:version => 20101024225235) do
     t.integer  "how_i_felt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "average_speed"
+    t.decimal  "slope"
   end
 
   create_table "users", :force => true do |t|

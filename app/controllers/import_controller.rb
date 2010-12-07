@@ -11,7 +11,11 @@ class ImportController < ApplicationController
       unless params[:csv].path.empty?
         Activity.destroy_all(:user_id => current_user.id)
         FasterCSV.foreach(params[:csv].path, :headers => :first_row, :skip_blanks => true) do |row|
-          Activity.create(row.to_hash.merge(:user => current_user))
+          record = row.to_hash.merge(:user => current_user)
+          if record["duration"].present?
+            record["duration"] = ActiveSupport::Duration.parse(record["duration"])
+          end
+          Activity.create(record)
         end
         flash[:notice] = "CSV File Imported"
       end
