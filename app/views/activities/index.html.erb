@@ -1,31 +1,31 @@
 <h1>Listing activities</h1>
 
+<%= will_paginate(@activities) %>
+
 <table>
   <tr>
-    <th>Day</th>
-    <th>Time</th>
-    <th>Activity</th>
-    <th>Location</th>
-    <th>Temperature</th>
-    <th>Equipment</th>
-    <th>Duration</th>
-    <th>Distance</th>
-    <th>Max speed</th>
-    <th>Average heart rate</th>
-    <th>Max heart rate</th>
-    <th>Calories</th>
-    <th>Max elevation</th>
-    <th>Total elevation gain</th>
-    <th>Total elevation loss</th>
-    <th>With</th>
-    <th>Average cadence</th>
-    <th>Route</th>
-    <th>Notes</th>
-    <th>Link</th>
-    <th>Weather</th>
-    <th>How i felt</th>
-    <th></th>
-    <th></th>
+    <th>Day <%= order_by_links("activities_path","day") %></th>
+    <th>Time <%= order_by_links("activities_path","time") %></th>
+    <th>Activity <%= order_by_links("activities_path","activity") %></th>
+    <th>Location <%= order_by_links("activities_path","location") %></th>
+    <th>Temperature <%= order_by_links("activities_path","temperature") %></th>
+    <th>Equipment <%= order_by_links("activities_path","equipment") %></th>
+    <th>Duration <%= order_by_links("activities_path","duration") %></th>
+    <th>Distance <%= order_by_links("activities_path","distance") %></th>
+    <th>Max speed <%= order_by_links("activities_path","max_speed") %></th>
+    <th>Average heart rate <%= order_by_links("activities_path","average_heart_rate") %></th>
+    <th>Max heart rate <%= order_by_links("activities_path","max_heart_rate") %></th>
+    <th>Calories <%= order_by_links("activities_path","calories") %></th>
+    <th>Max elevation <%= order_by_links("activities_path","max_elevation") %></th>
+    <th>Total elevation gain <%= order_by_links("activities_path","total_elevation_gain") %></th>
+    <th>Total elevation loss <%= order_by_links("activities_path","total_elevation_loss") %></th>
+    <th>With <%= order_by_links("activities_path","with") %></th>
+    <th>Average cadence <%= order_by_links("activities_path","average_cadence") %></th>
+    <th>Route <%= order_by_links("activities_path","activity.route") %></th>
+    <th>Notes <%= order_by_links("activities_path","notes") %></th>
+    <th>Link <%= order_by_links("activities_path","link") %></th>
+    <th>Weather <%= order_by_links("activities_path","weather") %></th>
+    <th>How i felt <%= order_by_links("activities_path","how_i_felt") %></th>
     <th></th>
   </tr>
 
@@ -48,18 +48,22 @@
     <td><%= activity.total_elevation_loss %></td>
     <td><%= activity.with %></td>
     <td><%= activity.average_cadence %></td>
-    <td><%= activity.route %></td>
+    <td><%= link_to 'click', activity.route %></td>
     <td><%= activity.notes %></td>
     <td><%= activity.link %></td>
     <td><%= activity.weather %></td>
     <td><%= activity.how_i_felt %></td>
-    <td><%= link_to 'Show', activity %></td>
-    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-    <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td>
+      <%= link_to 'Show', activity %>
+      <%= link_to 'Edit', edit_activity_path(activity) %>
+      <%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
+
+<%= will_paginate(@activities) %>
 
 <%= link_to 'New Activity', new_activity_path %>
