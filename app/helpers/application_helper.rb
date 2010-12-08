@@ -5,10 +5,12 @@ module ApplicationHelper
   end
   
   def format_duration(integer)
-    hours = integer / (60 * 60)
-    minutes = (integer - (hours * 60 * 60)) / 60
-    seconds = (integer - (hours * 60 * 60) - (minutes * 60))
-    return "#{hours}:#{minutes}:#{seconds}"
+    if integer.present?
+      hours = integer / (60 * 60)
+      minutes = (integer - (hours * 60 * 60)) / 60
+      seconds = (integer - (hours * 60 * 60) - (minutes * 60))
+      return "#{hours}:#{minutes}:#{seconds}"
+    end
   end
   
 end
